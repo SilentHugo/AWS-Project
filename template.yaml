@@ -544,11 +544,11 @@ Resources:
       Cooldown: "600"
       ScalingAdjustment: -1
 
-  WebCPUAlarmHigh:
+  WebNetworkInAlarmHigh:
     Type: AWS::CloudWatch::Alarm
     Properties: 
-      AlarmDescription: "Scale-up if CPU > 60% for 10 minutes"
-      MetricName: CPUUtilization
+      AlarmDescription: "Scale-up if Networkin > 60% for 10 minutes"
+      MetricName: NetworkIn
       Namespace: AWS/EC2
       Statistic: Average
       Period: "120"
@@ -561,11 +561,11 @@ Resources:
           Value: !Ref "WebServerGroup" 
       ComparisonOperator: "GreaterThanThreshold"
 
-  WebCPUAlarmLow:
+  WebNetworkInAlarmLow:
     Type: AWS::CloudWatch::Alarm
     Properties: 
-      AlarmDescription: "Scale-down if CPU < 50% for 60 min"
-      MetricName: CPUUtilization
+      AlarmDescription: "Scale-down if Networkin < 50% for 60 min"
+      MetricName: NetworkIn
       Namespace: AWS/EC2
       Statistic: Average
       Period: "120"
