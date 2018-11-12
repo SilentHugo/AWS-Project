@@ -11,8 +11,8 @@ Then delete other permissions without AdministratorAccess
 
 ## Cloud 9 Setup ##
 
-git clone https://github.com/SilentHugo/AWS-Project.git
-cd AWS-Project/  
+git clone https://github.com/HIN0815/AWS-Final-Project.git  
+cd AWS-Final-Project/  
 chmod +x *.sh  
 ./setup.sh  
 
