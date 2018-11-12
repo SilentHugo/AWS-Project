@@ -1,6 +1,6 @@
 echo "Deploy $STACK_NAME stack"
 
-sourcebucket=my$STACK_NAME
+sourcebucket=TamHoiKit170009871$STACK_NAME
 aws s3 mb s3://$sourcebucket --region $REGION
 rm package.yaml
 sam package --template-file template.yaml --s3-bucket $sourcebucket --output-template-file package.yaml
